@@ -7,4 +7,6 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+	list1 = str(hand).split()
+	hand = set(map(int,list1))
+	return hand
