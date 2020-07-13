@@ -9,10 +9,10 @@ from math import sqrt
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
 	dist = int(sqrt((x1 - x2)**2 + (y1 - y2)**2))
-	if(dist < (r1+r2)):
+	if(dist <= (r1+r2)):
     		return True
 	else:
     		return False
 
 
-print(fun_circlesintersect)
+print(fun_circlesintersect(-10, 8, 30, 14, -24, 10))
