@@ -7,6 +7,8 @@
 
 def handtodice(hand):
 	# your code goes here
-	list1 = str(hand).split()
-	hand = set(map(int,list1))
-	return hand
+	list1 = []
+	while(hand != 0):
+		list1.append(hand % 10)
+		hand = hand//10
+	return (list1[2] ,list1[1] ,list1[0])
