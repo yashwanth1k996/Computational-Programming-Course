@@ -55,3 +55,8 @@ e1 = Element(1)
 e2 = Element(2)
 e3 = Element(3)
 e4 = Element(4)
+
+
+stack = stack(e1)
+stack.push(e2)
+stack.push(e3)
