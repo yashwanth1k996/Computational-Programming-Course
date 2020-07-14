@@ -13,7 +13,8 @@ def fun_nearestodd(n):
 			print(here)
 			return val-1
 		else:
-				return val
+			print(here)
+			return val
 	else:
 		if(val%2 == 0):
 				return val+1
