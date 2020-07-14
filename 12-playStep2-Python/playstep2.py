@@ -30,4 +30,29 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	list1 = []
+	while hand != 0:
+		list1.append(hand % 10)
+		hand = hand // 10
+	
+	if(list1[0] == list1[1] or list1[0] == list1[2] or list1[1] == list1[2]):
+			list1.sort(reverse=True)
+			newHand = [list1[1], list1[2]]
+			newHand.append(dice % 10)
+			dice = dice // 10
+			newHand.sort()
+			hand = int("".join([str(ele) for ele in newHand]))
+			return (hand, dice)
+
+	else:
+		newHand = []
+		newHand.append(max(list1))
+		for i in range(2):
+			newHand.append(dice % 10)
+			dice = dice // 10
+		newHand.sort(reverse=True)
+		hand = int("".join([str(ele) for ele in newHand]))
+		return (hand, dice)
+
+
+print(playstep2(413, 2312))
