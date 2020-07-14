@@ -18,5 +18,4 @@ def dicetoorderedhand(a, b, c):
 	result = "".join([str(ele) for ele in list1])
 	return int(result)
 
-
 # print(dicetoorderedhand(1,2,3))
