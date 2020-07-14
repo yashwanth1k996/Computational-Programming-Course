@@ -6,6 +6,6 @@
 
 
 def fun_nearestodd(n):
-	return 0
+	val = int(n)
 
 
