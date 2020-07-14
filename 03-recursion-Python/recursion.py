@@ -13,6 +13,8 @@ def fib(position, f1, f2):
 
 
 def get_fib(position):
+    if(position == 0):
+        return 0
     val = fib(position, 0, 1)
     return val
 
