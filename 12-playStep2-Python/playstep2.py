@@ -40,7 +40,7 @@ def playstep2(hand, dice):
 			newHand = [list1[1], list1[2]]
 			newHand.append(dice % 10)
 			dice = dice // 10
-			newHand.sort()
+			newHand.sort(reverse=True)
 			hand = int("".join([str(ele) for ele in newHand]))
 			return (hand, dice)
 
