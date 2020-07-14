@@ -6,4 +6,12 @@
 
 def lineintersection(m1, b1, m2, b2):
 	# your code goes here
-	pass
+	a1 = m1
+	b = -1
+	c1 = b1
+	a2 = m2
+	c2 = b2
+
+	den = a1*b - a2*b
+	x = (c2*b - c1*b)/den
+	y = (c1*a2 - c2*a1)/den
