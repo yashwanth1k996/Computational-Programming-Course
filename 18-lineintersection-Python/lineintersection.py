@@ -14,7 +14,7 @@ def lineintersection(m1, b1, m2, b2):
 
 	den = a1*b - a2*b
 	print(den)
-	if(den == 0):
+	if(a1 == a2 or a1%a2 == 0 or a2%a1 == 0):
     		return None
 	x = (c2*b - c1*b)/den
 	return x
