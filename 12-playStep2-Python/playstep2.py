@@ -55,4 +55,4 @@ def playstep2(hand, dice):
 		return (hand, dice)
 
 
-print(playstep2(413, 2312))
+# print(playstep2(413, 2312))
