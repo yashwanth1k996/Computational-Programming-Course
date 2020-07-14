@@ -7,6 +7,10 @@
 
 def fun_get_kth_digit(digit, k):
 	val = 0
+	digit = abs(digit)
+	strdig = str(digit)
+	if(k > len(strdig)):
+    		return 0
 	for i in range(k+1):
 			val = digit % 10
 			digit = digit // 10
