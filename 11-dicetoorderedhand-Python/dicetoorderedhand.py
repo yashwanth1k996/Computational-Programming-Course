@@ -13,4 +13,10 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	list1 = [a, b, c]
+	list1.sort(reverse=True)
+	result = "".join([str(ele) for ele in list1])
+	return int(result)
+
+
+print(dicetoorderedhand(1,2,3))
