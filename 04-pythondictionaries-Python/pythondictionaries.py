@@ -31,3 +31,20 @@ Asian City - Country
 Asian City - Country"""
 
 locations = {'North America': {'USA': ['Mountain View']}}
+locations["Asia"] = {"India" : ["Bangalore"]}
+locations["North America"]["USA"] = locations["North America"]["USA"].append("Atlanta")
+locations["Africa"] = {"Egypt" : ["Cairo"]}
+locations["Asia"]["China"] = ["Shanghai"]
+
+def sortUSA():
+    list1 = locations["North America"]["USA"].sort()
+    return list1
+
+def alphaAsia():
+    asia = locations["Asia"]
+    asiakey = list(asia.keys())
+    asiakey.sort()
+    newlist = []
+    for i in asiakey:
+        newlist.append(i+" - "+asia[i][0])
+    return newlist
