@@ -8,6 +8,7 @@
 def fun_nearestodd(n):
 	val = int(n)
 	rem = n/float(val)
+	print(rem)
 	if(rem == 0):
 		if(val%2 == 0):
 			print(here)
