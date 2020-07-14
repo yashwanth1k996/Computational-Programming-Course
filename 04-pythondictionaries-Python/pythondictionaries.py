@@ -41,7 +41,6 @@ locations["Asia"]["China"] = ["Shanghai"]
 def sortUSA():
     list1 = locations['North America']['USA']
     list1.sort()
-    print(list1)
     return list1
 
 def alphaAsia():
@@ -53,5 +52,3 @@ def alphaAsia():
         newlist.append(asia[i][0]+" - "+i)
     return newlist
 
-
-print(sortUSA())
