@@ -7,4 +7,10 @@
 
 def islegaltriangle(s1, s2, s3):
 	# your code goes here
-	pass
+	list1 = [s1, s2, s3]
+	list1.sort(reverse=True)
+	if(list1[0] < list1[1]+list1[2]):
+    		return True
+
+	else:
+    		return False
