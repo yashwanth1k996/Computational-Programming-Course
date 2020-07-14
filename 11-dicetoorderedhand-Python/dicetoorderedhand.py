@@ -19,4 +19,4 @@ def dicetoorderedhand(a, b, c):
 	return int(result)
 
 
-print(dicetoorderedhand(1,2,3))
+# print(dicetoorderedhand(1,2,3))
