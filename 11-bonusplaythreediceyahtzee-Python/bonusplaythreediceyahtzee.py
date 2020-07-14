@@ -41,4 +41,13 @@
 
 def bonusplaythreediceyahtzee(dice):
 	# Your code goes here
-	pass
+	list1 = []
+	while(dice > 0):
+		list1.append(str(dice%10))
+		dice = dice//10
+	i = 0	
+	newhand = [ele for i in list1]
+
+	
+
+# bonusplaythreediceyahtzee(2312413)
