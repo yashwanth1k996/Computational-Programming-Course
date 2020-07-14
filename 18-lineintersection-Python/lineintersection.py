@@ -13,5 +13,13 @@ def lineintersection(m1, b1, m2, b2):
 	c2 = b2
 
 	den = a1*b - a2*b
+	print(den)
+	if(den == 0):
+    		return None
 	x = (c2*b - c1*b)/den
+	return x
 	y = (c1*a2 - c2*a1)/den
+
+
+print(lineintersection(2, 13, 2, 14))
+
