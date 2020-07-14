@@ -7,14 +7,11 @@
 
 def fun_nearestodd(n):
 	val = int(n)
-	rem = n/float(val)
-	print(rem)
+	rem = n%float(val)
 	if(rem == 0):
 		if(val%2 == 0):
-			print(here)
 			return val-1
 		else:
-			print(here)
 			return val
 	else:
 		if(val%2 == 0):
