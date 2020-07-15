@@ -5,8 +5,19 @@
 # so F(0)=F(1)=1, and F(2)=2. With this in mind, write the function 
 # nthfibonaccinumber(n) that takes a non-negative int n and returns the nth Fibonacci number.
 
-
+def fib(pos, f1, f2):
+	if(pos == 1):
+			return f2
+	else:
+			return fib(pos-1, f2, f1+f2)
 
 def fun_nthfibonaccinumber(n):
 	# your code goes Here
-	return 0
+	if(n == 0 or n == 1):
+    		return 1
+	val = fib(n, 0, 1)
+	return val
+
+
+
+print(fun_nthfibonaccinumber(6))
