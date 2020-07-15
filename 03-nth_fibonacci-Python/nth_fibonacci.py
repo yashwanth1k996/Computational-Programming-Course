@@ -6,10 +6,10 @@
 # nthfibonaccinumber(n) that takes a non-negative int n and returns the nth Fibonacci number.
 
 def fib(pos, f1, f2):
-	if(pos == 1):
-			return f2
-	else:
-			return fib(pos-1, f2, f1+f2)
+		if(pos == 0):
+				return f2
+		else:
+				return fib(pos-1, f2, f1+f2)
 
 def fun_nthfibonaccinumber(n):
 	# your code goes Here
@@ -20,4 +20,4 @@ def fun_nthfibonaccinumber(n):
 
 
 
-print(fun_nthfibonaccinumber(6))
+# print(fun_nthfibonaccinumber(6))
