@@ -46,7 +46,11 @@ def bonusplaythreediceyahtzee(dice):
 		list1.append(str(dice%10))
 		dice = dice//10
 	i = 0	
-	newhand = [ele for i in list1]
+	newhand = list1[:3]
+	if(newhand[0] == newhand[1] or newhand[1] == newhand[2] or newhand[2] == newhand[1]):
+    		newhand.sort(reverse=True)
+			newhand.pop()
+			newhand.pop()
 
 	
 
