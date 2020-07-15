@@ -31,7 +31,6 @@ def ishappynumber(n):
 		if(n in list1):
 				print(list1)
 				return False
-		
 		n = happy(n)
 		list1.append(n)
 
