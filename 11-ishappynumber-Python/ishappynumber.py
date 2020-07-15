@@ -14,6 +14,27 @@
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
 
+def happy(val):
+	sum = 0
+	while(val > 0):
+		sum += (val%10)**2
+		val = val//10
+	return sum
+
 def ishappynumber(n):
 	# your code goes here
-	pass
+	list1 = []
+	while True:
+		if(n == 1):
+				print(list1)
+				return True
+		if(n in list1):
+				print(list1)
+				return False
+		
+		n = happy(n)
+		list1.append(n)
+
+
+
+print(ishappynumber(404))
