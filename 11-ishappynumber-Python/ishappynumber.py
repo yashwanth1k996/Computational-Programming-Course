@@ -29,10 +29,11 @@ def ishappynumber(n):
 				print(list1)
 				return True
 		if(n in list1):
-				print(list1)
+				print("here", list1)
 				return False
-		n = happy(n)
 		list1.append(n)
+		n = happy(n)
+		
 
 
 
