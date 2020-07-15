@@ -16,7 +16,7 @@ def fun_find_int_roots(a, b, c):
 	root1 = num1/den
 	root2 = num2/den
 
-	return root1, root2
+	return root2, root1
 
 
 print(fun_find_int_roots(1, -6, 8))	
