@@ -11,6 +11,15 @@
 def gcd(m, n):
 	# your code goes here
 	if(m == 0):
-		return 1
+    		return n
+	if(n == 0):
+			return m
+	if(m == n):
+    		return m
+	if(m > n):
+    		return gcd(m-n, n)
+	return gcd(m, n - m)
 
 	return gcd(n%m, m)
+
+
