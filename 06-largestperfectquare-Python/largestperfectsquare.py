@@ -6,7 +6,15 @@
 # assert(largestPerfectSquare(26) == 25)
 # Hint: you may wish to use a similar approach to how you solved isPerfectSquare on the hw.
 # Another hint: This can be written using just one or two lines of Python.
-
+from math import sqrt
 def largestperfectsquare(n):
 	# your code goes here
-	pass
+	for i in range(n,0,-1):
+			val = sqrt(i)
+			print(val)
+			if(int(val) == val):
+					return i
+
+
+
+# print(largestperfectsquare(24))
