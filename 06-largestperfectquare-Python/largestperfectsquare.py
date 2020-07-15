@@ -11,7 +11,7 @@ def largestperfectsquare(n):
 	# your code goes here
 	for i in range(n,0,-1):
 			val = sqrt(i)
-			print(val)
+			# print(val)
 			if(int(val) == val):
 					return i
 
