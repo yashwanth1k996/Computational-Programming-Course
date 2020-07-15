@@ -21,5 +21,3 @@ def gcd(m, n):
 	return gcd(m, n - m)
 
 	return gcd(n%m, m)
-
-
