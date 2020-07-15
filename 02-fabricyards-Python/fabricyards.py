@@ -23,5 +23,7 @@ def fun_fabricexcess(inches):
 	# your code goes here
 	if(inches % 36 != 0):
     		return 36 - (inches% 36)
+	else:
+    		return 0
 
-
+print(fun_fabricexcess(72))
