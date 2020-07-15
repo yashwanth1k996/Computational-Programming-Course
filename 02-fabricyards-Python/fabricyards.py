@@ -26,4 +26,4 @@ def fun_fabricexcess(inches):
 	else:
     		return 0
 
-print(fun_fabricexcess(72))
+# print(fun_fabricexcess(72))
