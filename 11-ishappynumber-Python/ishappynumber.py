@@ -26,10 +26,10 @@ def ishappynumber(n):
 	list1 = []
 	while True:
 		if(n == 1):
-				print(list1)
+				# print(list1)
 				return True
 		if(n in list1):
-				print("here", list1)
+				# print("here", list1)
 				return False
 		list1.append(n)
 		n = happy(n)
