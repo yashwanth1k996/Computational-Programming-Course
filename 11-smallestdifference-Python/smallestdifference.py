@@ -8,10 +8,15 @@ def smallestdifference(a):
 	# Your code goes here
 	if(len(a) == 0):
 		return -1
+	a.sort()
+	if(len(a) == 2):
+		return a[0]-a[1]
+	
 	mindif = 10000000000
 	for i in range(0,len(a)-1):
-		for j in range(i,len(a)-1):
-			if(min > a[i]-a[j]):
-				min = a[i]-a[j]
+		for j in range(i+1,len(a)):
+			if(mindif > a[j]-a[i]):
+				mindif = a[j]-a[i]
+	return mindif
 
-	
+print(smallestdifference([1, -3, 71, 68, 17]))
