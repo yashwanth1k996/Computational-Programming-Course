@@ -7,6 +7,8 @@
 
 def issorted(a):
 	# your code goes here
+	if(len(a) == 1 or len(a) == 0):
+		return True
 	assendiing = False
 	if(a[0] < a[1]):
 		assendiing = True
