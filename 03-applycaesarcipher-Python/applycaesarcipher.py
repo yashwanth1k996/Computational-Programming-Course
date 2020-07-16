@@ -7,6 +7,7 @@
 # and lowercase letters should stay lowercase, and non-letter characters should not be changed. 
 # Note that "Z" wraps around to "A". So, for example:
 # assert(applyCaesarCipher("We Attack At Dawn", 1) == "Xf Buubdl Bu Ebxo")
+
 # assert(applyCaesarCipher("zodiac", -2) == "xmbgya")
 
 
@@ -16,17 +17,27 @@ def fun_applycaesarcipher(msg, shift):
 		if(i == " "):
 			string += " "
 		else:
-			val = ord(i) + shift
-			if(i == i.lower()):
+			print(string)
+			if(ord(i)<=90 and ord(i)>=65):
+				val = ord(i) + shift
 				if(val > 90):
 					val = (val - 90) + 64
 					string += chr(val)
+				elif(val < 65):
+					print(val)
+					val = 90-(65-val)
+					string += chr(val)
 				else:
 					string += chr(val)
+					
 
-			if(i == i.upper()):
+			if(ord(i)<=122 and ord(i)>=97):
+				val = ord(i) + shift
 				if(val > 122):
 					val = (val - 122) + 96
+					string += chr(val)
+				elif(val < 97):
+					val = 122-(97-val)
 					string += chr(val)
 				else:
 					string += chr(val)
