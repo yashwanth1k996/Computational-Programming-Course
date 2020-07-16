@@ -6,4 +6,20 @@
 
 def isrotated(str1, str2):
 	#Your code goes here
-	pass
+	if(len(str1) != len(str2)):
+		return False
+	j = 0
+	for i in range(0, len(str1)):
+		if(str1[i] == str2[j]):
+			j += 1
+		else:
+			if(j!=0):
+				j = 0
+	if(str1 == str2):
+		return True
+	if(str2[j+1 : ] == str1[:j]):
+		return True
+	else:
+		return False
+
+print(isrotated("XYZ", "ZXY"))
