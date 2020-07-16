@@ -19,7 +19,7 @@ def isrotated(str1, str2):
 		return True
 	print(str2[j : ])
 	print(str1[:len(str1)-j])
-	if(str2[j : ] == str1[:j+1]):
+	if(str2[j : ] == str1[:len(str1)-j]):
 		return True
 	else:
 		return False
