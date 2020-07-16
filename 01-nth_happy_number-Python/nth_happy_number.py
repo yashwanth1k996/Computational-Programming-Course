@@ -35,10 +35,10 @@ def fun_nth_happy_number(n):
     while(count != n):
         if(happuNumber(val)):
             count += 1
-            print(val)
+            # print(val)
             if(count == n):
                 break
         val += 1
     return val
 
-print(fun_nth_happy_number(3))	
+# print(fun_nth_happy_number(3))	
