@@ -7,7 +7,6 @@
 def fun_replace(s1, s2, s3):
 	s = ""
 	for i in range(0, len(s1)-len(s2)):
-		print("here")
 		print(s1[i:len(s2)])
 		print(s2)
 		if(s1[i:len(s2)+1] == s2):
