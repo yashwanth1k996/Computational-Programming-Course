@@ -13,8 +13,10 @@ def fun_replace(s1, s2, s3):
 		if(s1[i:len(s2)+i] == s2):
 			s = s1[:i]+s3+s1[(i+len(s2)) :]
 			flag = True
-			break
-	return s
+	if(flag == True):
+		return s
+	else:
+		return s1
 
-print(fun_replace("helloworld123", "123", "345"))
+print(fun_replace("hellrldowo23ufn348hf oincodnrld123", "rld", "     "))
 
