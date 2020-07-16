@@ -6,12 +6,13 @@
 
 def fun_replace(s1, s2, s3):
 	s = ""
-	for i in range(0, len(s1)-len(s2)):
+	print(len(s1))
+	for i in range(0, len(s1)-len(s2)+1):
 		print(s1[i:len(s2)])
 		if(s1[i:len(s2)] == s2):
-			s = s+s1[:i+1]+s3+s1[(i+len(s2)+1) :]
+			s = s+s1[:i]+s3+s1[(i+len(s2)) :]
 			break
 	return s
 
-print(fun_replace("helloworld123", "hello", "345"))
+print(fun_replace("helloworld123", "123", "345"))
 
