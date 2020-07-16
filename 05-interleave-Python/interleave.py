@@ -18,10 +18,10 @@ def fun_interleave(s1,s2):
 		s+=s2[i]
 		i+=1
 	if(s1len == minlen):
-    		s += s2[i:]
+		s += s2[i:]
 	else:
-    		s += s2[i:]
+		s += s1[i:]
 
 	return s
     		
-print(fun_interleave('a#', 'cD!f2'))
+# print(fun_interleave('a#', 'cD!f2'))
