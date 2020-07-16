@@ -24,8 +24,7 @@ def fun_applycaesarcipher(msg, shift):
 					val = (val - 90) + 64
 					string += chr(val)
 				elif(val < 65):
-					print(val)
-					val = 90-(65-val)
+					val = 90-(65-val)+1
 					string += chr(val)
 				else:
 					string += chr(val)
