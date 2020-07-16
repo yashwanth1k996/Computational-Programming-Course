@@ -17,9 +17,11 @@ def isrotated(str1, str2):
 				j = 0
 	if(str1 == str2):
 		return True
-	if(str2[j+1 : ] == str1[:j]):
+	print(str2[j : ])
+	print(str1[:len(str1)-j])
+	if(str2[j : ] == str1[:j+1]):
 		return True
 	else:
 		return False
 
-print(isrotated("XYZ", "ZXY"))
+print(isrotated("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "BCDEFGHIJKLMNOPQRSTUVWXYZA"))
