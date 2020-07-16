@@ -11,4 +11,3 @@ import pytest
 ])
 def test_fun_applycaesarcipher(msg, shift, result):
     assert fun_applycaesarcipher(msg, shift) == result
-
