@@ -18,11 +18,15 @@ def issorted(a):
 				assendiing = True
 	for i in range(0, len(a)-1):
 		if(assendiing == True):
-			if((a[i] < a[i+1]) == False):
+			if(a[i] <= a[i+1]):
+				continue
+			else:
 				return False
 		else:
-			if((a[i] > a[i+1]) == False):
+			if(a[i] >= a[i+1]):
+				continue
+			else:
 				return False
 	return True
 
-print(issorted([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
+print(issorted([1,1,1,1,2,2,2,2]))
