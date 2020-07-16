@@ -7,4 +7,17 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	assendiing = False
+	if(a[0] < a[1]):
+		assendiing = True
+	elif(a[0] == a[1]):
+		if(a[1] < a[2]):
+			assendiing = True
+	for i in range(0, len(a)-1):
+		if(assendiing == True):
+			if((a[i] < a[i+1]) == False):
+				return False
+		else:
+			if((a[i] > a[i+1]) == False):
+				return False
+	return True
