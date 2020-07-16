@@ -8,5 +8,20 @@
 
 
 def fun_interleave(s1,s2):
-	return ""
-	
+	s1len = len(s1)
+	s2len = len(s2)
+	minlen = min(s1len,s2len)
+	s = ""
+	i = 0
+	while(i<minlen):
+		s+=s1[i]
+		s+=s2[i]
+		i+=1
+	if(s1len == minlen):
+    		s += s2[i:]
+	else:
+    		s += s2[i:]
+
+	return s
+    		
+print(fun_interleave('a#', 'cD!f2'))
