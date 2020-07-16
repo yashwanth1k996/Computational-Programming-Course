@@ -10,6 +10,31 @@
 # assert(nthHappyNumber(6) == 28)
 # assert(nthHappyNumber(7) == 31)
 
+def newNumber(n):
+    sum = 0
+    while n > 0:
+        sum += (n%10)
+        n = n//10
+    return sum
+
+def happuNumber(n):
+    list1 = []
+    if(n == 1):
+        return True
+    if(n in list1):
+        return False
+    list1.append(n)
+    n = newNumber(n)
 
 def fun_nth_happy_number(n):
-	return 0
+    count = 0
+    val = 1
+    while(count == n):
+        if(happuNumber(val)):
+            count += 1
+            if(count == n):
+                break
+        val +=1
+    return val
+
+	
