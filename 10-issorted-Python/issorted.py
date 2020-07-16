@@ -13,7 +13,7 @@ def issorted(a):
 	if(a[0] < a[1]):
 		assendiing = True
 	elif(a[0] == a[1]):
-		if(a[1] < a[2]):
+		if(a[1] < a[2] and len(a) >2):
 			assendiing = True
 	for i in range(0, len(a)-1):
 		if(assendiing == True):
@@ -23,3 +23,5 @@ def issorted(a):
 			if((a[i] > a[i+1]) == False):
 				return False
 	return True
+
+print(issorted([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
