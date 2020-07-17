@@ -10,29 +10,19 @@ elements are in a strictly increasing order.
 Return the index of value, or -1 if the value
 doesn't exist in the list."""
 
-def binary_search(arr,ele):
+def binary_search(arr,value):
     
     # First and last index values
     first = 0
     last = len(arr) - 1
-    
-    found = False
-    
-    
+    # found = False
     while first <= last:
-        
-        mid = (first+last)//2 # or // for Python 3
-        
-        # Match found
-        if arr[mid] == ele:
+        mid = (first+last)//2
+        if arr[mid] == value:
             return mid
-        
-        # Set new midpoints up or down depending on comparison
         else:
-            # Set down
-            if ele < arr[mid]:
+            if value < arr[mid]:
                 last = mid -1
-            # Set up 
             else:
                 first = mid + 1
                 
