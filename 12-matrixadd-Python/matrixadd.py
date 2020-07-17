@@ -24,7 +24,8 @@ def matrixadd(L, M):
 	L = np.array(L)
 	M = np.array(M)
 	n = np.add(L, M)
-	return n
+	list1 = [list(val) for val in n]
+	return list1
 
-print(matrixadd([[1,  2,  3],[4,  5,  6]], [[21, 22, 23], [24, 25, 26]]))
+# print(matrixadd([[1,  2,  3],[4,  5,  6]], [[21, 22, 23], [24, 25, 26]]))
 	
