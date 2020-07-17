@@ -79,3 +79,5 @@ e3 = Element(3)
 ll = LinkedList(e1)
 ll.append(e2)
 ll.append(e3)
+
+print(ll.get_position(2).value)
