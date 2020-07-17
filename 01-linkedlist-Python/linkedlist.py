@@ -70,8 +70,7 @@ class LinkedList(object):
                 current_position.next = current_position.next.next
                 break
             current_position = current_position.next
-
-
+            
 e1 = Element(1)
 e2 = Element(2)
 e3 = Element(3)
