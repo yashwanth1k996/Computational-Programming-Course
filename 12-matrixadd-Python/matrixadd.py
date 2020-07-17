@@ -15,6 +15,16 @@
 # None if the two matrices 
 # cannot be added because they are of different dimensions.
 
+import numpy as np
+
 def matrixadd(L, M):
 	# Your code goes here
-	pass
+	if(np.size(L) != np.size(M)):
+		return None
+	L = np.array(L)
+	M = np.array(M)
+	n = np.add(L, M)
+	return n
+
+print(matrixadd([[1,  2,  3],[4,  5,  6]], [[21, 22, 23], [24, 25, 26]]))
+	
