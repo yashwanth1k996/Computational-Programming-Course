@@ -19,11 +19,11 @@ class LinkedList(object):
         
     def append(self, new_element):
         # Your code goes here
-        if(head is None):
-            head = new_element
+        if(self.head is None):
+            self.head = new_element
         else:
             new_element.next = self.head
-            head = new_element
+            self.head = new_element
         pass
             
     def get_position(self, position):
@@ -61,9 +61,21 @@ class LinkedList(object):
     def delete(self, value):
         """Delete the first node with a given value."""
         # Your code goes here
+        
+        if(value == 1):
+            self.head = self.head.next
         current_position = self.head
         while(current_position.next != None):
             if(current_position.next.value == value):
                 current_position.next = current_position.next.next
                 break
             current_position = current_position.next
+
+
+e1 = Element(1)
+e2 = Element(2)
+e3 = Element(3)
+
+ll = LinkedList(e1)
+ll.append(e2)
+ll.append(e3)
