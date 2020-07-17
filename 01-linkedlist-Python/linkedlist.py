@@ -19,6 +19,11 @@ class LinkedList(object):
         
     def append(self, new_element):
         # Your code goes here
+        if(head is None):
+            head = new_element
+        else:
+            new_element.next = self.head
+            head = new_element
         pass
             
     def get_position(self, position):
@@ -26,7 +31,12 @@ class LinkedList(object):
         Assume the first position is "1".
         Return "None" if position is not in the list."""
         # Your code goes here
-        pass
+        current_position = self.head
+        count = 0
+        while(current_position.next != None):
+            if(position == count):
+                return current_position
+
     
     def insert(self, new_element, position):
         """Insert a new node at the given position.
