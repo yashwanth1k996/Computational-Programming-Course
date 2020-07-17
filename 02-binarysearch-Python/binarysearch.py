@@ -19,13 +19,13 @@ def binary_search(arr,ele):
     found = False
     
     
-    while first <= last and not found:
+    while first <= last:
         
         mid = (first+last)//2 # or // for Python 3
         
         # Match found
         if arr[mid] == ele:
-            found = True
+            return mid
         
         # Set new midpoints up or down depending on comparison
         else:
@@ -39,5 +39,5 @@ def binary_search(arr,ele):
     return -1
 
 
-print(binary_search([1,3,9,11,15,19,29], 24))
+print(binary_search([1,3,9,11,15,19,29], 15))
 
