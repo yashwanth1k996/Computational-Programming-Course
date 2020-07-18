@@ -12,5 +12,18 @@
 
 
 def fun_isfactorish(n):
-	return False
+	if(len(str(n)) == 3):
+		imp = abs(n)
+		while(imp > 0):
+			val = imp%10
+			imp = imp//10
+			if(val == 0):
+				return False
+			if(n%val == 0):
+				continue
+			else:
+				return False
+		return True
+	else:
+		return False
 
