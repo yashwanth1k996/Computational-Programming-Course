@@ -22,7 +22,7 @@ def findzerowithbisection(x, epsilon):
 		elif(x - mid**2 > epsilon):
 			print("increase")
 			low = mid
-		elif(x-mid**2 >= -epsilon and x-mid**2 <= epsilon):
+		elif((x-mid**2) >= -epsilon and (x-mid**2) <= epsilon):
 			return mid
 		c += 1
 		
