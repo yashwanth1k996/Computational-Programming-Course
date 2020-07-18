@@ -18,14 +18,14 @@
 
 def fun_wordwrap(s, n):
 	s = s.strip(" ")
-	new = """\ """
+	new = ""
 	for i in range(0,len(s), n):
 		for j in range(i,i+n):
 			if(s[j] == " "):
 				new += "-"
 			else:
 				new += s[j]
-		new += """\n """
+		new += """\n"""
 	return new
 
 
