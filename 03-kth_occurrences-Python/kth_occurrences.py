@@ -5,6 +5,7 @@
 
 def fun_kth_occurrences(s, n):
 	d = {}
+	s = s.strip()
 	for i in s:
 		if(i in d):
 			d[i] += 1
@@ -14,4 +15,4 @@ def fun_kth_occurrences(s, n):
 		if(d[j]-1 == n):
 			return j
 
-print(fun_kth_occurrences("helllo woorld", 2))
+print(fun_kth_occurrences("    h  ", 2))
