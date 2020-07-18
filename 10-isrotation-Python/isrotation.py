@@ -11,13 +11,15 @@ def isrotation(x, y):
 	y = str(y)
 	if(len(x) != len(y)):
 		return False
+	if(x == y):
+		return True
 	j = 0
 	for i in range(0, len(x)):
 		if(x[i] == y[j]):
 			j += 1
 		else:
 			j = 0
-	if(y[j:] == x[:len(x-j)]):
+	if(y[j:] == x[:len(x)-j]):
 		return True
 	else:
 		return False
