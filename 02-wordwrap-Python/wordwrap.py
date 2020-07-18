@@ -29,7 +29,11 @@ def fun_wordwrap(s, n):
 			if(i != len(s)-n):
 				new += "\n"
 		else:
-			new += s[i:]
+			for k in s[i:]:
+				if(k == " "):
+					new += "-"
+				else:
+					new += s[i:]
 	return new
 
 
