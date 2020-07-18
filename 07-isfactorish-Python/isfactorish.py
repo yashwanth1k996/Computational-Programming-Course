@@ -12,10 +12,16 @@
 
 
 def fun_isfactorish(n):
+	n = abs(n)
+	n = list(set(str(n)))
+	n = "".join(n)
+	n = int(n)
 	if(len(str(n)) == 3):
-		imp = abs(n)
+		imp = n
+		list1 = []
 		while(imp > 0):
 			val = imp%10
+			list1.append(val)
 			imp = imp//10
 			if(val == 0):
 				return False
@@ -27,3 +33,4 @@ def fun_isfactorish(n):
 	else:
 		return False
 
+print(fun_isfactorish(-412))
