@@ -19,10 +19,8 @@ def fun_isfactorish(n):
 	print(n)
 	if(len(str(n)) == 3):
 		imp = n
-		list1 = []
 		while(imp > 0):
 			val = imp%10
-			list1.append(val)
 			imp = imp//10
 			if(val == 0):
 				return False
