@@ -15,14 +15,14 @@ def findzerowithbisection(x, epsilon):
 	while(c < 30):
     		
 		mid = (low + high)/2
-		print(mid)
+		print(-mid)
 		if(x-mid**2 < epsilon):
 			print("reduce")
 			high = mid
 		elif(x - mid**2 > epsilon):
 			print("increase")
 			low = mid
-		else:
+		elif(x-mid**2 >= -(epsilon) and x-mid**2 <= epsilon):
 			return mid
 		c += 1
 		
