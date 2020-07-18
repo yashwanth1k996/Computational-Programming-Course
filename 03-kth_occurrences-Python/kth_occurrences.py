@@ -3,7 +3,6 @@
 # can account as K-th the most frequent character then, print any one of them.
 
 
-
 def fun_kth_occurrences(s, n):
 	return 'a'
 
