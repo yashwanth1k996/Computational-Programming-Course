@@ -11,7 +11,7 @@ class HashTable(object):
         the table."""
         # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter 
         # Your code goes here
-        val = calculate_hash_value(string)
+        val = self.calculate_hash_value(string)
         self.table[val] = string
         
     def lookup(self, string):
@@ -31,5 +31,3 @@ class HashTable(object):
         # Your code goes here
         hash_value = ord(string[0])*100 + ord(string[1])
         return hash_value
-
-
