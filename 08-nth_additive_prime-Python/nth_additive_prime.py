@@ -7,4 +7,8 @@
 
 
 def fun_nth_additive_prime(n):
-	return 1
+	if(n == 0):
+		return 2
+	while(count < n):
+		if(isadditiveprime(val)):
+			count += 1
