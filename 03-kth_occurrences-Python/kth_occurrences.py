@@ -12,8 +12,7 @@ def fun_kth_occurrences(s, n):
 			d[i] = 1
 	val = list(d.values())
 	val.sort(reverse=True)
-	print(val)
-	val = val[n]
+	val = val[n-1]
 	print(val)
 	for j in d:
 		if(d[j] == val):
