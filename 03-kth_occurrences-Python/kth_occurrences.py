@@ -14,6 +14,7 @@ def fun_kth_occurrences(s, n):
 	val.sort(reverse=True)
 	print(val)
 	val = val[n]
+	print(val)
 	for j in d:
 		if(d[j] == val):
 			return j
