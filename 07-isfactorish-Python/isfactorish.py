@@ -16,6 +16,7 @@ def fun_isfactorish(n):
 	n = list(set(str(n)))
 	n = "".join(n)
 	n = int(n)
+	print(n)
 	if(len(str(n)) == 3):
 		imp = n
 		list1 = []
