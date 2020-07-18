@@ -10,8 +10,12 @@ def fun_kth_occurrences(s, n):
 			d[i] += 1
 		else:
 			d[i] = 1
+	val = list(d.values())
+	val.sort()
+	
+	val = val[n]
 	for j in d:
-		if(d[j]-1 == n):
+		if(d[j] == val):
 			return j
 
 print(fun_kth_occurrences("helllo woorld", 2))
