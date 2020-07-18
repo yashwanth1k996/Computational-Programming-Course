@@ -33,7 +33,7 @@ def fun_wordwrap(s, n):
 				if(k == " "):
 					new += "-"
 				else:
-					new += s[i:]
+					new += k
 	return new
 
 
