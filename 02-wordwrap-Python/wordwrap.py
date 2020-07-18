@@ -25,7 +25,7 @@ def fun_wordwrap(s, n):
 				new += "-"
 			else:
 				new += s[j]
-				new += """\n """
+		new += """\n """
 	return new
 
 
