@@ -6,12 +6,12 @@
 def fun_kth_occurrences(s, n):
 	d = {}
 	for i in s:
-		if(i in d):
+		if(i in d.keys()):
 			d[i] += 1
 		else:
 			d[i] = 1
 	val = list(d.values())
-	val.sort()
+	val.sort(reverse=True)
 	print(val)
 	
 	val = val[n]
