@@ -13,7 +13,8 @@ def findzerowithbisection(x, epsilon):
 	high = x
 	c = 0
 	while(c < 5):
-		mid = low + high/2
+    		
+		mid = (low + high)/2
 		print(mid)
 		if(x-mid**2 < epsilon):
 			print("reduce")
