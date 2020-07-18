@@ -16,14 +16,16 @@ def findzerowithbisection(x, epsilon):
     		
 		mid = (low + high)/2
 		print(mid)
-		if(x-mid**2 < epsilon):
+		if((x-mid**2) >= -(epsilon+0.01) and (x-mid**2) <= (epsilon+0.01)):
+			return mid
+		
+		elif(x-mid**2 < epsilon):
 			print("reduce")
 			high = mid
 		elif(x - mid**2 > epsilon):
 			print("increase")
 			low = mid
-		elif((x-mid**2) >= -(epsilon+0.01) and (x-mid**2) <= (epsilon+0.01)):
-			return mid
+		
 		c += 1
 		
 print(findzerowithbisection(25, 0.01))
