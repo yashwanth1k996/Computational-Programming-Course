@@ -10,5 +10,7 @@ def fun_kth_occurrences(s, n):
 			d[i] += 1
 		else:
 			d[i] = 1
-	
+	for j in d:
+		if(d[j] == n):
+			return j
 
