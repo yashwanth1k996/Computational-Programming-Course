@@ -14,4 +14,4 @@ def fun_kth_occurrences(s, n):
 		if(d[j] == n):
 			return j
 
-print(fun_kth_occurrences("helllo world", 2))
+print(fun_kth_occurrences("helllo woorld", 2))
