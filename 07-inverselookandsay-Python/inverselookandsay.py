@@ -10,4 +10,8 @@
 
 def inverselookandsay(a):
 	# Your code goes here
-	pass
+	list1 = 0
+	for i in a:
+		for i in range(0, i[0]):
+			list1.append(i[1])
+	return list1
