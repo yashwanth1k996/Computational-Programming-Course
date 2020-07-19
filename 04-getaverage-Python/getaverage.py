@@ -12,10 +12,13 @@
 def fun_getaverage(s):	
 	sum = 0
 	count = 0
-	print(ord("14"))
 	s = s.split(",")
 	for i in s:
-		if(type(int(i)) == int):
+		if(i[len(i)//2] in "abcdefghijklmnopqrstuvwxyz" or i[0] in "abcdefghijklmnopqrstuvwxyz"):
+			continue
+		else:
 			sum += int(i)
 			count += 1
+	if(sum == 0):
+		return 0.0
 	return sum/count
