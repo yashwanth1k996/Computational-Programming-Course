@@ -9,4 +9,12 @@
 
 def lookandsay(a):
 	# Your code goes here
-	pass
+	d={}
+	for i in a:
+		if(i in d.keys()):
+			d[i] += 1
+		else:
+			d[i] = 1
+	list1 = []
+	for i in d.keys():
+		list1.append((d[i], i))
