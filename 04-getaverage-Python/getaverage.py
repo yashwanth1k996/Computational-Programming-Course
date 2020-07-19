@@ -21,4 +21,5 @@ def fun_getaverage(s):
 		return sum/count
 	except:
 		print("value error")
+		return False
 
