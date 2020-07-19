@@ -14,5 +14,6 @@ def fun_alternatingsum(a):
 			sum += a[i]
 		else:
 			sum -= a[i]
+	return sum
 
 
