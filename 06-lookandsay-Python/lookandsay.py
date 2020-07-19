@@ -9,6 +9,8 @@
 
 def lookandsay(a):
 	# Your code goes here
+	if(a == []):
+		return []
 	list1 = []
 	val = 0
 	count = 0
