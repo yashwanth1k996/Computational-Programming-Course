@@ -9,17 +9,13 @@
 
 
 
-def fun_getaverage(s):
-	try:
-		sum = 0
-		count = 0
-		s = s.split(",")
-		for i in s:
-			if(type(int(i)) == int):
-				sum += int(i)
-				count += 1
-		return sum/count
-	except:
-		print("value error")
-		return False
-
+def fun_getaverage(s):	
+	sum = 0
+	count = 0
+	print(ord("14"))
+	s = s.split(",")
+	for i in s:
+		if(type(int(i)) == int):
+			sum += int(i)
+			count += 1
+	return sum/count
