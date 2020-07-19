@@ -9,13 +9,17 @@
 
 def lookandsay(a):
 	# Your code goes here
-	d={}
-	for i in a:
-		if(i in d.keys()):
-			d[i] += 1
-		else:
-			d[i] = 1
 	list1 = []
-	for i in d.keys():
-		list1.append((d[i], i))
+	val = 0
+	count = 0
+	for i in a:
+		if(val != i):
+			list1.append((count, val))
+			val = i
+			count = 1
+		else:
+			count += 1
 	return list1
+
+
+print(lookandsay([1, 1, 1]))
