@@ -12,13 +12,15 @@ def lookandsay(a):
 	list1 = []
 	val = 0
 	count = 0
-	for i in a:
-		if(val != i):
-			list1.append((count, val))
-			val = i
+	for i in range(0, len(a)):
+		if(val != a[i]):
+			if(i != 0):
+				list1.append((count, val))
+			val = a[i]
 			count = 1
 		else:
 			count += 1
+	list1.append((count, val))
 	return list1
 
 
