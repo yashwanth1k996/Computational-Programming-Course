@@ -18,3 +18,4 @@ def lookandsay(a):
 	list1 = []
 	for i in d.keys():
 		list1.append((d[i], i))
+	return list1
