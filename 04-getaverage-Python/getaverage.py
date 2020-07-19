@@ -10,5 +10,7 @@
 
 
 def fun_getaverage(s): 
-	return 0.0
+	sum = 0
+	count = 0
+	s = s.split(",")
 
