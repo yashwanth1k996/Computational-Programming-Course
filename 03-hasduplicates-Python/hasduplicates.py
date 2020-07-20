@@ -5,4 +5,12 @@
 
 def hasduplicates(L):
 	# Your code goes here
-	pass
+	d = {}
+	for i in L:
+		for j in i:
+			if(j in d.keys()):
+				d[j] += 1
+				return True
+			else:
+				d[j] = 1
+	return False
