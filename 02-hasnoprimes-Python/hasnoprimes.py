@@ -5,8 +5,8 @@
 def isprime(n):
 	for i in range(2, n//2+1):
 		if(n%i == 0):
-			return True
-	return False
+			return False
+	return True
     		
 
 
@@ -15,7 +15,6 @@ def fun_hasnoprimes(l):
 	for i in l:
 		for j in i:
 			if(isprime(j)):
-				print(j)
 				return False
 	return True
 
