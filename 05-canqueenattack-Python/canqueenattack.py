@@ -11,6 +11,8 @@ def canqueenattack(qR, qC, oR, oC):
 		qC +=1
 		if(qR == oR and qC == oC):
 			kill = True
-	if(qR == oR and qC == oC):
+	if(qR == oR or qC == oC):
 		kill = True
 	return kill
+
+print(canqueenattack(1, 1, 1, 2))
