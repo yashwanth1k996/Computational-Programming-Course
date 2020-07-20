@@ -24,13 +24,14 @@ def destructiveshortenlongruns(L, k):
 			count += 1
 		else:
 			if(val == x[i]):
+				count += 1
 				if(count >= k):
 					L.pop(i-popped)
 					popped+=1
 			else:
 				val = x[i]
-				count += 1
+				count = 1
 	return L
 
 
-print(destructiveshortenlongruns([2, 3, 5, 5, 5, 3], 3))
+print(destructiveshortenlongruns([2, 3, 6, 6, 6, 3], 3))
