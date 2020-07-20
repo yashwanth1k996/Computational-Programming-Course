@@ -15,20 +15,20 @@ def shortenlongruns(L, k):
 	count = 0
 	val = 0
 	for i in range(0, len(L)):
-		if(i == 0):
-			list1.append(i)
-			val = i
+		if(L[i] == 0):
+			list1.append(L[i])
+			val = L[i]
 			count = 1
 		else:
-			if(i == val):
+			if(L[i] == val):
 				count += 1
-				if(count <= k):
-					list1.append(i)
+				if(count < k):
+					list1.append(L[i])
 			else:
-				val = i
-				list1.append(i)
+				val = L[i]
+				list1.append(L[i])
 				count = 1
 	return list1
 		
     			
-
+print(shortenlongruns([2, 3, 5, 5, 5, 3], 3))
