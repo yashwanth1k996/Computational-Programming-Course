@@ -7,5 +7,25 @@
 
 
 def fixmostlymagicsquare(L):
-	pass
 	# Your code goes here
+	sum1 = sum(L[0])
+	d = {}
+	for i in L:
+		if(sum(i) in d.keys()):
+			d[sum(i)] += 1
+		else:
+			d[sum(i)] = 1
+	val = max(d.values())
+	for j in d:
+		if(d[j] == val):
+			sum1 = j
+	
+	for i in range(0, len(L)):
+		if(sum(L[i]) != sum1):
+			if(sum1 > sum(L[i])):
+				L[i][-1] = L[i][-1] + (sum1 - sum(L[i]))
+			elif(sum1 < sum(L[i])):
+				L[i][-1] = L[i][-1] - (sum(L[i]) - sum1)
+	return L
+
+print(fixmostlymagicsquare([[2, 7, 9], [9, 5, 4], [4, 3, 11]]))
