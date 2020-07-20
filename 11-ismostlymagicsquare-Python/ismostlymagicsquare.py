@@ -23,13 +23,15 @@ def ismostlymagicsquare(a):
 		return False
 	for i in a:
 		if(sum(i) != sum1):
+			print("rows elimination")
 			return False
 	sumd = 0
 	sumd2 = 0
 	for i in range(len(a)):
 		sumd += a[i][i]
 		sumd2 += a[len(a)-1-i][len(a)-1-i]
-	if(sumd != sum1 or sumd2 != sum):
+	if(sumd != sum1 or sumd2 != sum1):
+		print("diagniols elimination")
 		return False
 	return True
 	
