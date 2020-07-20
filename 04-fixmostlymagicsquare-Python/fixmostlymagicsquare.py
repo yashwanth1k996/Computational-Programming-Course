@@ -16,6 +16,7 @@ def fixmostlymagicsquare(L):
 		else:
 			d[sum(i)] = 1
 	val = max(d.values())
+	print(d)
 	for j in d:
 		if(d[j] == val):
 			sum1 = j
@@ -28,4 +29,4 @@ def fixmostlymagicsquare(L):
 				L[i][-1] = L[i][-1] - (sum(L[i]) - sum1)
 	return L
 
-print(fixmostlymagicsquare([[2, 7, 9], [9, 5, 4], [4, 3, 11]]))
+print(fixmostlymagicsquare([[2, 7, 9], [9, 5, 1], [4, 3, 8]]))
