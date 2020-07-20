@@ -15,4 +15,21 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+	if(len(a) == 1):
+		return True
+	sum1 = sum(a[0])
+	if(len(a) != len(a[0])):
+		print("length elimination")
+		return False
+	for i in a:
+		if(sum(i) != sum1):
+			return False
+	sumd = 0
+	sumd2 = 0
+	for i in range(len(a)):
+		sumd += a[i][i]
+		sumd2 += a[len(a)-1-i][len(a)-1-i]
+	if(sumd != sum1 or sumd2 != sum):
+		return False
+	return True
+	
