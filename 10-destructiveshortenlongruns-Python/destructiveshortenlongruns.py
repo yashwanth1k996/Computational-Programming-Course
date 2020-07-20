@@ -16,14 +16,21 @@ def destructiveshortenlongruns(L, k):
 	# Your code goes here
 	val = 0
 	count = 0
+	x = L.copy()
+	popped = 0
 	for i in range(0, len(L)):
 		if(i == 0):
-			val = L[i]
+			val = x[i]
 			count += 1
 		else:
-			if(val == L[i]):
-				if(count>=k):
-					L.pop(i)
+			if(val == x[i]):
+				if(count >= k):
+					L.pop(i-popped)
+					popped+=1
 			else:
-				val = L[i]
+				val = x[i]
 				count += 1
+	return L
+
+
+print(destructiveshortenlongruns([2, 3, 5, 5, 5, 3], 3))
