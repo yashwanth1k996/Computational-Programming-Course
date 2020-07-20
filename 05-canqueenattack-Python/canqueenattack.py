@@ -5,4 +5,12 @@
 
 def canqueenattack(qR, qC, oR, oC):
 	# Your code goes here
-	pass
+	kill = False
+	while(qR < 8 and qC < 8):
+		qR +=1
+		qC +=1
+		if(qR == oR and qC == oC):
+			kill = True
+	if(qR == oR and qC == oC):
+		kill = True
+	return kill
