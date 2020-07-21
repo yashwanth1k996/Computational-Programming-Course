@@ -25,4 +25,4 @@ def fun_matrixmultiply(m1, m2):
     return mat
 
 
-
+print(fun_matrixmultiply([[1,3],[2,4],[2,5]], [[1,3,2,2], [2,4,5,1]]))
