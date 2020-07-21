@@ -31,4 +31,4 @@ def fun_recursion_onlyevendigits(l):
 	return l
 	
 
-print(fun_recursion_onlyevendigits([43, 23265, 17, 58344]))
+# print(fun_recursion_onlyevendigits([43, 23265, 17, 58344]))
