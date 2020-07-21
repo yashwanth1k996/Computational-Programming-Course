@@ -24,6 +24,13 @@ def maxi(l, pos, maxpos):
 
 def recursion_secondlargest(L):
 	# Your code goes here
+	if(len(L) == 0 or len(L) == 1):
+		return None
 	val = maxi(L, 0, 0)
 	check = L.pop(val)
+
+	val = maxi(L, 0, 0)
+	check = L.pop(val)
+	return check
 	
+print(recursion_secondlargest([-3,-4]))
