@@ -10,7 +10,7 @@ def fun_matrixmultiply(m1, m2):
     rows2 = len(m2)
     col1 = len(m1[0])
     col2 = len(m2[0])
-    if(rows1 != col2):
+    if(col1 != rows2):
         return None
     mat = []
     for i in range(0, rows1):
