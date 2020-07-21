@@ -20,14 +20,16 @@
 def recbinser(l, v, list1, low, high):
 	mid = (low + high)//2
 	if(ord(l[mid]) == ord(v)):
+		print("came here")
 		return list1.append((mid, l[mid]))
 	else:
 		if(ord(v) > ord(l[mid])):
 			low = mid+1
 		else:
 			high = mid-1
-		
-		return recbinser(l,v, list1.append((mid, l[mid])), low, high)
+		list1.append((mid, l[mid]))
+		print(list1)
+		return recbinser(l,v, list1, low, high)
 
 
 
@@ -37,4 +39,7 @@ def recursion_binarysearchvalues(L, v):
 	list1 = []
 	list1 = recbinser(L, v, list1, 0, len(L)-1)
 	return list1
-	
+
+
+
+print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'c'))
