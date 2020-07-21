@@ -18,7 +18,6 @@
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
 
 def recbinser(l, v, list1, low, high, mid):
-	mid = (low + high)//2
 	if(ord(l[mid]) == ord(v)):
 		print("came here")
 		list1.append((mid, l[mid]))
@@ -28,6 +27,9 @@ def recbinser(l, v, list1, low, high, mid):
 			low = mid+1
 		else:
 			high = mid-1
+		if((low+high)//2 == mid):
+			list1.append((mid, l[(low+high)//2]))
+			return list1
 		list1.append((mid, l[mid]))
 		print(list1)
 		return recbinser(l,v, list1, low, high, (low+high)//2)
@@ -43,4 +45,4 @@ def recursion_binarysearchvalues(L, v):
 
 
 
-print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'c'))
+print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'f'))
