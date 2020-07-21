@@ -13,6 +13,17 @@
 # Again, you do not need to sort the list. We didn't sort it in our sample solution. We just tracked the two largest 
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
+def maxi(l, pos, maxpos):
+	if(pos == len(l)):
+		return maxpos
+	if(l[pos] > l[maxpos]):
+		return maxi(l, pos+1, pos)
+	else:
+		return maxi(l, pos+1, maxpos)
+	
+
 def recursion_secondlargest(L):
 	# Your code goes here
-	pass
+	val = maxi(L, 0, 0)
+	check = L.pop(val)
+	
