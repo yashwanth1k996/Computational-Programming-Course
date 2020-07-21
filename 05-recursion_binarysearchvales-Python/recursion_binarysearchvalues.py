@@ -19,14 +19,15 @@
 
 def recbinser(l, v, list1, low, high):
 	mid = (low + high)//2
-	if(l[mid] == v):
+	if(ord(l[mid]) == ord(v)):
 		return list1.append((mid, l[mid]))
 	else:
-		if(v > l[mid]):
+		if(ord(v) > ord(l[mid])):
 			low = mid+1
 		else:
 			high = mid-1
-			return recbinser(l,v, list1.append((mid, l[mid])), low, high)
+		
+		return recbinser(l,v, list1.append((mid, l[mid])), low, high)
 
 
 
