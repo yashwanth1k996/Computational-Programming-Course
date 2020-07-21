@@ -17,7 +17,7 @@
 #     assert(binarySearchValues(L, v) == [(2,'f'), (0,'a'), (1,'c')])
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
 
-def recbinser(l, v, list1, low, high):
+def recbinser(l, v, list1, low, high, mid):
 	mid = (low + high)//2
 	if(ord(l[mid]) == ord(v)):
 		print("came here")
@@ -30,7 +30,7 @@ def recbinser(l, v, list1, low, high):
 			high = mid-1
 		list1.append((mid, l[mid]))
 		print(list1)
-		return recbinser(l,v, list1, low, high)
+		return recbinser(l,v, list1, low, high, (low+high)//2)
 
 
 
@@ -38,7 +38,7 @@ def recbinser(l, v, list1, low, high):
 def recursion_binarysearchvalues(L, v):
 	# Your codes goes here
 	list1 = []
-	list1 = recbinser(L, v, list1, 0, len(L)-1)
+	list1 = recbinser(L, v, list1, 0, len(L)-1, (0+len(L)-1)//2)
 	return list1
 
 
