@@ -5,7 +5,12 @@
 
 
 def fun_matrixmultiply(m1, m2):
-    return None
+    rows1 = len(m1)
+    rows2 = len(m2)
+    col1 = len(m1[0])
+    col2 = len(m2[0])
+    if(col1 != rows2):
+        return None 
 
 
 
