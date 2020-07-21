@@ -5,14 +5,11 @@
 
 
 def sol(n, list1, comp):
-	if(comp > n):
-		return list1
+	if(3**comp <= n):
+		list1.append(3**comp)
+		return sol(n, list1, comp+1)
 	else:
-		if(comp**3 < n):
-			list1.append(comp)
-			return sol(n, list1, comp+1)
-		else:
-			return sol(n, list1, comp+1)
+		return list1
 
 
 def recursion_powersof3ton(n):
@@ -21,7 +18,7 @@ def recursion_powersof3ton(n):
 		return None
 	else:
 		list1 = []
-		list1 = sol(n, list1, 1)
+		list1 = sol(n, list1, 0)
 	if(list1 == []):
 		return None
 	return list1
