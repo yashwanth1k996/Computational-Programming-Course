@@ -11,18 +11,24 @@
 def rec(l, res, count):
 	if(count == len(l)):
 		return res
-	if(count%2 == 0):
+	if(int(l[-1-count])%2 == 0):
 		res += l[-1-count]
+		return rec(l, res, count+1)
+	else:
 		return rec(l, res, count+1)
 	
 
 
 def fun_recursion_onlyevendigits(l):
-	res = ""
 	for i in range(0, len(l)):
 		d = str(l[i])
-		res = rec(d[-1::-1], res, 0)
+		print(d[-1::-1])
+		res = rec(d[-1::-1], "", 0)
+		# print("res here:", int(res))
+		if(res == ""):
+			res = "0"
 		l[i] = int(res)
 	return l
 	
-	
+
+print(fun_recursion_onlyevendigits([43, 23265, 17, 58344]))
