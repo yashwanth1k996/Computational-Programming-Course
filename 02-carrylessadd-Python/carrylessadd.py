@@ -17,14 +17,15 @@ def fun_carrylessadd(x, y):
 		val = val%10
 		print(val)
 		res += str(val)
+	print(res)
 	if(lenx > leny):
-		res = x[:minlen] + res[-1:]
+		res = x[:minlen] + res[-1::-1]
 	if(leny > lenx):
-		res = y[:minlen] + res[-1:]
+		res = y[:minlen] + res[-1::-1]
 	if(lenx == leny):
-		res = res[-1:]
+		res = res[-1::-1]
 
 	return int(res)
 
 
-print(fun_carrylessadd(785, 376))
+print(fun_carrylessadd(121, 0))
