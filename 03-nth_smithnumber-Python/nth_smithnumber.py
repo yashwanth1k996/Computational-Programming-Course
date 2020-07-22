@@ -51,5 +51,6 @@ def fun_nth_smithnumber(n):
             count += 1
     return val
 
+print(issmith(27))
 
-print(fun_nth_smithnumber(1))
+print(fun_nth_smithnumber(2))
