@@ -16,12 +16,11 @@ def fun_carrylessadd(x, y):
 		val = int(x[i]) + int(y[i])
 		val = val%10
 		res += str(val)
-	print(res)
 	if(lenx > leny):
 		res = x[:(lenx -minlen)] + res[-1::-1]
 		print(res)
 	if(leny > lenx):
-		res = y[:minlen] + res[-1::-1]
+		res = y[:(lenx -minlen)] + res[-1::-1]
 	if(lenx == leny):
 		res = res[-1::-1]
 
