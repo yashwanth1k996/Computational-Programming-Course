@@ -9,7 +9,7 @@ def property(n):
 	val = n**5
 	val = str(val)
 	for i in range(0,10):
-		if(i not in val):
+		if(str(i) not in val):
 			return False
 	return True
 
@@ -17,8 +17,11 @@ def property(n):
 def nthwithproperty309(n):
 	# Your code goes here
 	i = 0
+	count = 0
 	while(count <= n):
 		if(property(i)):
 			count += 1
 		i += 1
-	
+	return i
+
+print(nthwithproperty309(0))
