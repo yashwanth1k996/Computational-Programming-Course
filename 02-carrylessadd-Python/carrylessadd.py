@@ -6,5 +6,21 @@
 
 
 def fun_carrylessadd(x, y):
-	return 0
+	x = str(x)
+	y = str(y)
+	lenx = len(str(x))
+	leny = len(str(y))
+	minlen = min(lenx, leny)
+	res = ""
+	for i in range(minlen-1, 0, -1):
+		val = int(x[i]) + int(y[i])
+		val = val%10
+		res += str(val)
+	if(lenx > leny):
+		res = x[:minlen] + res[-1::-1]
+	if(leny > lenx):
+		res = y[:minlen] + res[-1::-1]
+	if(lenx == leny):
+		res = res[-1::-1]
 
+	return res
