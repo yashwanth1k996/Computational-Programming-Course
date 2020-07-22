@@ -16,7 +16,6 @@ def longestdigitrun(n):
 		if(n[i] == val):
 			count += 1
 		else:
-			print(val)
 			if(count > maxcount):
 				maxcount = count
 				maxval = val
@@ -30,4 +29,4 @@ def longestdigitrun(n):
 
 
 
-print(longestdigitrun(44332211111))
+print(longestdigitrun(44332211))
