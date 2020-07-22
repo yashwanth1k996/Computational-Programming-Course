@@ -12,10 +12,9 @@ def fun_carrylessadd(x, y):
 	leny = len(str(y))
 	minlen = min(lenx, leny)
 	res = ""
-	for i in range(minlen-1, 0, -1):
+	for i in range(minlen-1, -1, -1):
 		val = int(x[i]) + int(y[i])
 		val = val%10
-		print(val)
 		res += str(val)
 	print(res)
 	if(lenx > leny):
