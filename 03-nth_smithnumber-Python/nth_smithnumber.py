@@ -23,14 +23,16 @@ def isprime(n):
             return False
     return True
 
-
+def primefactors(n):
+    list1 = []
+    for i in range(0,n//2+1):
+        if(n%i == 0 and isprime(i)):
+            list1.append(i) 
 
 def issmith(n):
     list1 = []
     for i in range(2, n//2 + 1):
         if(n%i == 0 and isprime(i)):
-            if(isprime(n//i)):
-                list1.append(n//i)
             list1.append(i)
     print(list1)
     nsum = digsum(n)
