@@ -50,3 +50,6 @@ def fun_nth_smithnumber(n):
         if(issmith(val)):
             count += 1
     return val
+
+
+print(fun_nth_smithnumber(1))
