@@ -23,4 +23,4 @@ def fun_carrylessadd(x, y):
 	if(lenx == leny):
 		res = res[-1::-1]
 
-	return res
+	return int(res)
