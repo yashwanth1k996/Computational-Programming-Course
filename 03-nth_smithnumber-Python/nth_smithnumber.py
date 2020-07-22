@@ -8,5 +8,24 @@
 # so fun_nthsmithnumber(1) should return 22
 
 
+
+def digsum(n):
+    sum = 0
+    while(n > 0):
+        sum += n%10
+        n = n//10
+    return sum
+
+
+def isprime(n):
+    for i in range(2, n//2 + 1):
+        if(n%i == 0):
+            return False
+    return True
+
+
+def issmith(n):
+    pass
+
 def fun_nth_smithnumber(n):
-    return 1
+    pass
