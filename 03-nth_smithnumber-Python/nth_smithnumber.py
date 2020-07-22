@@ -28,7 +28,9 @@ def issmith(n):
     list1 = []
     for i in range(2, n//2 + 1):
         if(n%i == 0 and isprime(i)):
+            list1.append(n//i)
             list1.append(i)
+    print(list1)
     nsum = digsum(n)
     listsum = 0
     for i in list1:
@@ -51,6 +53,6 @@ def fun_nth_smithnumber(n):
             count += 1
     return val
 
-print(issmith(27))
+print(issmith(4))
 
-print(fun_nth_smithnumber(2))
+# print(fun_nth_smithnumber(2))
