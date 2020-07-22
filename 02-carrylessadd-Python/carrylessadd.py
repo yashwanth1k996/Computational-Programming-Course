@@ -24,3 +24,6 @@ def fun_carrylessadd(x, y):
 		res = res[-1::-1]
 
 	return int(res)
+
+
+print(fun_carrylessadd(99, 1))
