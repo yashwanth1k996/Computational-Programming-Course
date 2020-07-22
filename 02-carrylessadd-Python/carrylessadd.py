@@ -17,9 +17,9 @@ def fun_carrylessadd(x, y):
 		val = val%10
 		res += str(val)
 	if(lenx > leny):
-		res = x[:minlen] + res[-1::-1]
+		res = x[:minlen] + res[-1:]
 	if(leny > lenx):
-		res = y[:minlen] + res[-1::-1]
+		res = y[:minlen] + res[-1:]
 	if(lenx == leny):
 		res = res[-1::-1]
 
