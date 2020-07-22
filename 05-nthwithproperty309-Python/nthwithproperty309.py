@@ -19,9 +19,10 @@ def nthwithproperty309(n):
 	i = 0
 	count = 0
 	while(count <= n):
+		i += 1
 		if(property(i)):
 			count += 1
-		i += 1
+		
 	return i
 
-print(nthwithproperty309(0))
+print(nthwithproperty309(1))
