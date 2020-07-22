@@ -25,7 +25,28 @@ def isprime(n):
 
 
 def issmith(n):
-    pass
+    list1 = []
+    for i in range(2, n//2 + 1):
+        if(n%i == 0 and isprime(i)):
+            list1.append(i)
+    nsum = digsum(n)
+    listsum = 0
+    for i in list1:
+        listsum += digsum(i)
+    if(listsum == nsum):
+        return True
+    else:
+        return False
+
+
 
 def fun_nth_smithnumber(n):
-    pass
+    if(n == 0):
+        return 4
+    val = 4
+    count = 0
+    while(count != n):
+        val += 1
+        if(issmith(val)):
+            count += 1
+    return val
