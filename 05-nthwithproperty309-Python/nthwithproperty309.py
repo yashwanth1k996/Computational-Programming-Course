@@ -4,6 +4,21 @@
 # Write the function nthWithProperty309 that takes a non-negative int n and returns 
 # the nth number with Property309.
 
+
+def property(n):
+	val = n**5
+	val = str(val)
+	for i in range(0,10):
+		if(i not in val):
+			return False
+	return True
+
+
 def nthwithproperty309(n):
 	# Your code goes here
-	pass
+	i = 0
+	while(count <= n):
+		if(property(i)):
+			count += 1
+		i += 1
+	
