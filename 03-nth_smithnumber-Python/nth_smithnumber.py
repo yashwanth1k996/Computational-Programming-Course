@@ -28,6 +28,12 @@ def primefactors(n):
         list1.append(n)
     print(list1)
     return list1
+def isprime(n):
+    for i in range(2, n//2+1):
+        if(n%i == 0):
+            return False
+    return True
+
 
 def issmith(n):
     nsum = digisum(n)
@@ -47,13 +53,14 @@ def fun_nth_smithnumber(n):
     val  = 4
     while(count != n):
         if(issmith(val)):
-            count += 1
-            if(count == n):
-                return val
+            if(not isprime(val)):
+                count += 1
+                if(count == n):
+                    return val
 
         val += 1
 
-print(fun_nth_smithnumber(10))
+print(fun_nth_smithnumber(0))
 
 
 # print(fun_nth_smithnumber(2))
