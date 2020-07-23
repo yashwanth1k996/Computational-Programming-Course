@@ -44,7 +44,7 @@ def issmith(n):
         return False
 def fun_nth_smithnumber(n):
     count = -1
-    val  = 1
+    val  = 4
     while(count != n):
         if(issmith(val)):
             count += 1
@@ -53,7 +53,9 @@ def fun_nth_smithnumber(n):
 
         val += 1
 
-print(fun_nth_smithnumber(1))
+
+
+print(fun_nth_smithnumber(10))
 
 
 # print(fun_nth_smithnumber(2))
