@@ -9,16 +9,32 @@
 
 import math 
 
-def fun_nth_kaprekarnumber(n):
+def iskaprekar(n):
     val = n**2
     vallen = len(str(val))
     mid = vallen//2
     strval = str(val)
-    print(int(strval[:mid+1]), int(strval[mid+1:]))
-    if((int(strval[:mid+1]) + int(strval[mid+1:])) == n):
+    if(vallen == 1):
+        if(val == n):
+            return True
+        else:
+            return False
+    if((int(strval[:mid]) + int(strval[mid:])) == n):
         return True
     else:
         return  False
 
 
-print(fun_nth_kaprekarnumber(45))
+
+def fun_nth_kaprekarnumber(n):
+    count = -1
+    val = 1
+    while(True):
+        if(iskaprekar(val)):
+            count+=1
+            if(count == n):
+                return val
+        val += 1
+
+
+print(fun_nth_kaprekarnumber(1))
