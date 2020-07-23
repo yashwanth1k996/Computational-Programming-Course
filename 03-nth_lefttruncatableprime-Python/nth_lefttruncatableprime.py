@@ -10,5 +10,34 @@
 
 import math
 
+def isprime(n):
+    for i in range(2, n//2 + 1):
+        if(n%i == 0):
+            return False
+    return True
+
+def lefttruncate(n):
+    list1 = []
+    while(n > 0):
+        list1.append(str(n%10))
+        n = n//10
+    for i in range(len(list1)-1, -1, -1):
+        check = "".join(list1[i::-1])
+        if(not isprime(int(check))):
+            return False
+    return True
+
+
 def fun_nth_lefttruncatableprime(n):
-    return 1
+    count = -1
+    val = 2
+    while(count <n):
+        if(isprime(val)):
+            if(lefttruncate(val)):
+                count += 1
+                if(count == n):
+                    return val
+        val+=1
+
+
+print(fun_nth_lefttruncatableprime(1))
