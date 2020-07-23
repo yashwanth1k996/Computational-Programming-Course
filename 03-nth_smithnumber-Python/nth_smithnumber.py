@@ -60,7 +60,7 @@ def fun_nth_smithnumber(n):
 
         val += 1
 
-print(fun_nth_smithnumber(0))
+print(fun_nth_smithnumber(1))
 
 
 # print(fun_nth_smithnumber(2))
