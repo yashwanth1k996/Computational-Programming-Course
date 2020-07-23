@@ -7,53 +7,52 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
-
-
-def digsum(n):
-    sum = 0
+def digisum(n):
+    dsum = 0
     while(n > 0):
-        sum += n%10
+        dsum += n%10
         n = n//10
-    return sum
+    return dsum
 
+def primefactors(n):
+    list1 = []
+    while(n%2 == 0):
+        list1.append(2)
+        n = n//2
+    for i in range(3, n//2+1, 2):
+        while(n%i == 0):
+            list1.append(i)
+            n = n//i
 
-def isprime(n):
-    for i in range(2, n//2 + 1):
-        if(n%i == 0):
-            return False
-    return True
-
-
+    if(n > 2):
+        list1.append(n)
+    print(list1)
+    return list1
 
 def issmith(n):
-    list1 = []
-    for i in range(2, n//2 + 1):
-        if(n%i == 0 and isprime(i)):
-            list1.append(n//i)
-            list1.append(i)
-    print(list1)
-    nsum = digsum(n)
-    listsum = 0
-    for i in list1:
-        listsum += digsum(i)
-    if(listsum == nsum):
+    nsum = digisum(n)
+    pflist = primefactors(n)
+    pfsum = 0
+    for i in pflist:
+        if(i > 9):
+            pfsum += digisum(i)
+        else:
+            pfsum += i
+    if(pfsum == nsum):
         return True
     else:
         return False
-
-
-
 def fun_nth_smithnumber(n):
-    if(n == 0):
-        return 4
-    val = 4
     count = 0
-    while(count != n):
-        val += 1
+    val  = 1
+    while(True):
         if(issmith(val)):
-            count += 1
-    return val
+            if(count == n):
+                return val
+        val += 1
 
-print(issmith(27))
+
+
+    
 
 # print(fun_nth_smithnumber(2))
