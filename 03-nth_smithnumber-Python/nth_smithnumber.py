@@ -55,6 +55,5 @@ def fun_nth_smithnumber(n):
 
 print(fun_nth_smithnumber(1))
 
-    
 
 # print(fun_nth_smithnumber(2))
