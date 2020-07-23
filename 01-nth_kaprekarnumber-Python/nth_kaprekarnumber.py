@@ -11,7 +11,7 @@ import math
 
 def isequal(val, n):
     for i in range(1, len(val)):
-        if((int(val[:i]) + int(val[i:])) == n):
+        if((int(val[:i]) + int(val[i:])) == n and int(val[i:]) != 0):
             return True
     return False
 
@@ -44,4 +44,4 @@ def fun_nth_kaprekarnumber(n):
         val += 1
 
 
-print(fun_nth_kaprekarnumber(2))
+print(fun_nth_kaprekarnumber(5))
