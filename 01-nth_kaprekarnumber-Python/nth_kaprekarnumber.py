@@ -9,6 +9,13 @@
 
 import math 
 
+def isequal(val, n):
+    for i in range(1, len(val)):
+        if((int(val[:i]) + int(val[i:])) == n):
+            return True
+    return False
+
+
 def iskaprekar(n):
     val = n**2
     vallen = len(str(val))
@@ -19,7 +26,7 @@ def iskaprekar(n):
             return True
         else:
             return False
-    if((int(strval[:mid]) + int(strval[mid:])) == n):
+    if(isequal(strval, n)):
         return True
     else:
         return  False
@@ -37,4 +44,4 @@ def fun_nth_kaprekarnumber(n):
         val += 1
 
 
-print(fun_nth_kaprekarnumber(10))
+print(fun_nth_kaprekarnumber(2))
