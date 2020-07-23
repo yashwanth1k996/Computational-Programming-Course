@@ -19,10 +19,9 @@ def fun_nth_carolprime(n):
     val = 2
     while(count < n):
         check = ((2**val - 1)**2 - 2)
-        if(isprime(check)):
-            count += 1
-            if(count == n):
-                return check
+        count += 1
+        if(count == n):
+            return check
         val += 1
 
 
