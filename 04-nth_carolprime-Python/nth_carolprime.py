@@ -26,4 +26,4 @@ def fun_nth_carolprime(n):
         val += 1
 
 
-print(fun_nth_carolprime(6))
+print(fun_nth_carolprime(3))
