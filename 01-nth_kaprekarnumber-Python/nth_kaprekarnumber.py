@@ -7,7 +7,18 @@
 # and returns the nth Kaprekar number, where as usual we start counting at n==0.
 
 
-import math
+import math 
 
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    val = n**2
+    vallen = len(str(val))
+    mid = vallen//2
+    strval = str(val)
+    print(int(strval[:mid+1]), int(strval[mid+1:]))
+    if((int(strval[:mid+1]) + int(strval[mid+1:])) == n):
+        return True
+    else:
+        return  False
+
+
+print(fun_nth_kaprekarnumber(45))
