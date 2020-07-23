@@ -40,4 +40,4 @@ def fun_nth_lefttruncatableprime(n):
         val+=1
 
 
-print(fun_nth_lefttruncatableprime(1))
+print(fun_nth_lefttruncatableprime(4))
