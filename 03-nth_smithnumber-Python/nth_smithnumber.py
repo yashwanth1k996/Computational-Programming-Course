@@ -53,8 +53,6 @@ def fun_nth_smithnumber(n):
 
         val += 1
 
-
-
 print(fun_nth_smithnumber(10))
 
 
