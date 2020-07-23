@@ -37,4 +37,4 @@ def fun_nth_kaprekarnumber(n):
         val += 1
 
 
-print(fun_nth_kaprekarnumber(0))
+print(fun_nth_kaprekarnumber(7))
