@@ -11,6 +11,8 @@
 import math
 
 def isprime(n):
+    if(n == 1):
+        return False
     for i in range(2, n//2 + 1):
         if(n%i == 0):
             return False
@@ -23,7 +25,7 @@ def lefttruncate(n):
         n = n//10
     for i in range(len(list1)-1, -1, -1):
         check = "".join(list1[i::-1])
-        if(not isprime(int(check))):
+        if(not isprime(int(check)) or "0" in check):
             return False
     return True
 
@@ -40,4 +42,4 @@ def fun_nth_lefttruncatableprime(n):
         val+=1
 
 
-print(fun_nth_lefttruncatableprime(4))
+print(fun_nth_lefttruncatableprime(15))
