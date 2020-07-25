@@ -24,7 +24,7 @@ def fun_nth_tidynumber(n):
     while(count < n):
         if(istidynumber(val)):
             count += 1
-            print(val)
+            # print(val)
             if(count == n):
                 return val
         val += 1
