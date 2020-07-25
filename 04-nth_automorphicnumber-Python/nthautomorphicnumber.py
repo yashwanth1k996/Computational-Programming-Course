@@ -26,3 +26,8 @@ def nthautomorphicnumbers(n):
 			count += 1
 			if(count == n):
 				return val
+
+
+
+
+print(nthautomorphicnumbers(10))
