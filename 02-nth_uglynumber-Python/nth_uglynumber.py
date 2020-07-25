@@ -29,6 +29,7 @@ def fun_nth_uglynumber(n):
             count += 1
             if(count == n):
                 return val
+        val += 1
 
     
-print(fun_nth_uglynumber(1))
+print(fun_nth_uglynumber(100))
