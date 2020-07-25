@@ -12,9 +12,12 @@ def primefactors(p):
 	for i in range(3, p//2+1, 2):
 		while(p%i == 0):
 			list1.append(i)
+			p = p//i
 	if(p>2):
 		list1.append(p)
 	return list1
+
+print(primefactors(36))
 
 def powerfull(n):
 	checklist = primefactors(n)
@@ -36,4 +39,4 @@ def nthpowerfulnumber(n):
 		val += 1
 
 	
-print(nthpowerfulnumber(0))
+print(nthpowerfulnumber(4))
