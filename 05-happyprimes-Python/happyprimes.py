@@ -16,16 +16,24 @@ def sumOfSquaresOfDigits(n):
         sum += (n%10)**2
         n = n//10
     return sum
+def isprime(n):
+    for i in range(2, n//2+1):
+        if(n%i == 0):
+            return False
+    return True
 def ishappyprimenumber(n):
     # Your code goes here
-    list1 = []
-    while(True):
-        n = sumOfSquaresOfDigits(n)
-        if(n in list1):
-            return False
-        list1.append(n)
-        if(n == 1):
-            return True
+    if(isprime(n)):
+        list1 = []
+        while(True):
+            n = sumOfSquaresOfDigits(n)
+            print(n)
+            if(n in list1):
+                return False
+            list1.append(n)
+            if(n == 1 and isprime(n)):
+                return True
+    else:
+        return False
 
-
-print(ishappyprimenumber(19))
+print(ishappyprimenumber(1000))
