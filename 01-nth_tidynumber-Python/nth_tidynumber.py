@@ -30,4 +30,4 @@ def fun_nth_tidynumber(n):
         val += 1
 
 
-print(fun_nth_tidynumber(15))
+# print(fun_nth_tidynumber(15))
