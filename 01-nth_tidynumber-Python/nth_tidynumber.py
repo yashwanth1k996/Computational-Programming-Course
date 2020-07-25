@@ -11,7 +11,7 @@ def istidynumber(val):
     if(len(val) == 1):
         return True
     for i in range(0, len(val)-1):
-        if(not (val[i] < val[i+1])):
+        if(not (val[i] <= val[i+1])):
             return False
     return True
 
@@ -24,9 +24,10 @@ def fun_nth_tidynumber(n):
     while(count < n):
         if(istidynumber(val)):
             count += 1
+            print(val)
             if(count == n):
                 return val
         val += 1
 
 
-print(fun_nth_tidynumber(5))
+print(fun_nth_tidynumber(15))
