@@ -7,4 +7,4 @@
 
 def samechars(s1, s2):
 	# Your code goes here
-	pass
+	print(s1.split())
