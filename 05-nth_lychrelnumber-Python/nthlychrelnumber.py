@@ -22,7 +22,7 @@ def islychrel(x):
 	for i in range(0, 20):
 		x = x + reverse(x)
 		print(x)
-		if(ispalindrome(x)):
+		if(not ispalindrome(x)):
 			return True
 	return False		
 		
