@@ -11,7 +11,7 @@ def permute(a, l, r, res):
 			a[l], a[i] = a[i], a[l]
 			permute(a, l+1, r, res)
 			a[l], a[i] = a[i], a[l]
-
+		return res
 
 def getallpermutations(x):
 	# Your code goes here
