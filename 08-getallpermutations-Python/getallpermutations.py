@@ -25,5 +25,5 @@ def getallpermutations(x):
 
 
 
-print(getallpermutations("abc"))
-print(list(permutations("abc")))
+print(getallpermutations("xyzab"))
+print(list(permutations("xyzab")))
