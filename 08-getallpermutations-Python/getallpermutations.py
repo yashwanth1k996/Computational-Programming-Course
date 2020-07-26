@@ -21,4 +21,4 @@ def getallpermutations(x):
 
 
 
-print(permute(['a', 'b', 'c'], 0, 2))
+permute(['a', 'b', 'c'], 0, 2)
