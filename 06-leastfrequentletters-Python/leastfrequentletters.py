@@ -20,7 +20,11 @@ def leastfrequentletters(s):
 	if(d == {}):
 		return ""
 	low = min(d.values())
+	list1 = []
 	for i in d.keys():
 		if(d[i] == low):
-			return i
-	return ""
+			list1.append(i)
+	result = "".join(list1)
+	return result
+
+
