@@ -16,10 +16,9 @@ def getallpermutations(x):
 	# Your code goes here
 	n = len(x)
 	a = list(x)
-	res = []
-	return permute(a, 0, n-1, res)
+	return permute(a, 0, n-1)
 
 
 
 
-print(permute(['a', 'b', 'c'], 0, 2))
+print(getallpermutations("abc"))
