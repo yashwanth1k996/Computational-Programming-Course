@@ -26,6 +26,6 @@ def samechars(s1, s2):
 		return True
 	else:
 		return False
-# print(samechars("abcabcabc", "cba"))
+print(samechars("abcabcabc", "cbad"))
 
 
