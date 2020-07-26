@@ -24,7 +24,7 @@ def leastfrequentletters(s):
 	for i in d.keys():
 		if(d[i] == low):
 			list1.append(i)
-	result = "".join(list1)
+	result = "".join(list1[-1::-1])
 	return result
 
 
