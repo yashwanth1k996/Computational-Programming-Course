@@ -11,7 +11,7 @@ def longestcommonsubstring(s1, s2):
     # Yourcode goes here
     big = ""
     small = ""
-    common = []
+    common = ""
     if(len(s1) < len(s2)):
         big = s2
         small = s1
@@ -28,6 +28,6 @@ def longestcommonsubstring(s1, s2):
     return common
 
 
-print(longestcommonsubstring("abcABC", "zzabZZAB"))
+print(longestcommonsubstring("abABC", "abcAB"))
 
 
