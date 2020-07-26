@@ -17,6 +17,8 @@ def leastfrequentletters(s):
 				d[i] += 1
 			else:
 				d[i] = 1
+	if(d == {}):
+		return ""
 	low = min(d.values())
 	for i in d.keys():
 		if(d[i] == low):
