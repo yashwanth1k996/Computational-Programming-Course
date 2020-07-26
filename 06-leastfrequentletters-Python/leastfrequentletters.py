@@ -9,4 +9,11 @@
 
 def leastfrequentletters(s):
 	# Your code goes here
-	pass
+	d = {}
+	s = s.lower()
+	for i in s:
+		if(i in "abcdefghijklmnopqrstuvwxyz"):
+			if(i in d.keys()):
+				d[i] += 1
+			else:
+				d[i] = 1
