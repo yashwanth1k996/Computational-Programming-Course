@@ -9,6 +9,8 @@ def samechars(s1, s2):
 	# Your code goes here
 	list1 = []
 	list2 = []
+	if(s1 == s2):
+		return True
 	for i in s1:
 		if(i not in list1):
 			list1.append(i)
