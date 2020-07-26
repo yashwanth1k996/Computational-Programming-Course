@@ -23,8 +23,8 @@ def islychrel(x):
 		x = x + reverse(x)
 		print(x)
 		if(not ispalindrome(x)):
-			return True
-	return False		
+			return False
+	return True		
 		
 
 def nthlychrelnumbers(n):
