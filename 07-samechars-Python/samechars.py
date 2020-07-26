@@ -8,3 +8,6 @@
 def samechars(s1, s2):
 	# Your code goes here
 	print(s1.split())
+
+
+print(samechars("aassssdd", "ajdshd"))
