@@ -11,7 +11,7 @@ def longestcommonsubstring(s1, s2):
     # Yourcode goes here
     big = ""
     small = ""
-    common = ""
+    common = []
     if(len(s1) < len(s2)):
         big = s2
         small = s1
@@ -22,7 +22,7 @@ def longestcommonsubstring(s1, s2):
     while(box < len(small)):
         for i in range(0, len(small) - box):
             if(small[i:i+box] in big):
-                common = small[i:i+box]
+                common.append(small[i:i+box])
         box += 1
     return common
 
