@@ -16,7 +16,9 @@ def longestcommonsubstring(s1, s2):
         big = s2
         small = s1
     else:
-        small = s1
+        big = s1
+        small = s2
+
     box = 1
     print(1)
     while(box < len(small)):
