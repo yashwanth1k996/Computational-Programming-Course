@@ -10,11 +10,6 @@ def permute(a, l, r):
 			a[l], a[i] = a[i], a[l]
 			permute(a, l+1, r)
 			a[l], a[i] = a[i], a[l]
-		return a
-
-
-
-
 
 
 def getallpermutations(x):
@@ -26,4 +21,4 @@ def getallpermutations(x):
 
 
 
-print(getallpermutations("abc"))
+print(permute(['a', 'b', 'c'], 0, 2))
