@@ -6,7 +6,7 @@
 
 def ispalindrome(x):
 	val = str(x)
-	if(val[-1:] == str(x)):
+	if(val[-1::-1] == str(x)):
 		return True
 	else:
 		return False
@@ -39,5 +39,5 @@ def nthlychrelnumbers(n):
 		val += 1
 
 
-print(islychrel(56))
+print(islychrel(196))
 
