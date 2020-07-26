@@ -6,3 +6,8 @@ def getallpermutations(x):
 	# Your code goes here
 	x = list(x)
 	print(x)
+
+
+
+
+print(getallpermutations("kbk"))
