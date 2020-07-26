@@ -21,7 +21,7 @@ def getallpermutations(x):
 	# a = list(x)
 	# result = []
 	# return permute(a, 0, n-1, result)
-	return permutations(x)
+	return list(permutations(x))
 
 
 
