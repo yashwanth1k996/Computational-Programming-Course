@@ -18,11 +18,8 @@ def longestcommonsubstring(s1, s2):
     else:
         big = s1
         small = s2
-
     box = 1
-    print(1)
     while(box < len(small)):
-        print("while entered")
         for i in range(0, len(small) - box):
             print("here")
             if(small[i:i+box] in big):
