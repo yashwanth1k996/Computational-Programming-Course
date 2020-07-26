@@ -1,6 +1,9 @@
 # getallPermutations(str) [20 pts]
 # Write an efficient program to print all permutations of a given String. For example, if given input is "abc" then 
 # your program should print all 6 permutations e.g. [('a', 'b', 'c'), ('a', 'c', 'b'), ('b', 'a', 'c'), ('b', 'c', 'a'), ('c', 'a', 'b'), ('c', 'b', 'a')]
+from itertools import permutations
+
+
 def permute(a, l, r, result):
 	if(l == r):
 		result.append(tuple(a))
@@ -9,6 +12,7 @@ def permute(a, l, r, result):
 			a[l], a[i] = a[i], a[l]
 			permute(a, l+1, r, result)
 			a[l], a[i] = a[i], a[l]
+		result.sort()
 		return result
 
 def getallpermutations(x):
@@ -22,3 +26,4 @@ def getallpermutations(x):
 
 
 print(getallpermutations("abc"))
+print(permutations("abc"))
