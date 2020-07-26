@@ -40,5 +40,5 @@ def nthlychrelnumbers(n):
 		val += 1
 
 
-print(nthlychrelnumbers(15))
+print(nthlychrelnumbers(11))
 
