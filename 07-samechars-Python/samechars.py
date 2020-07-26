@@ -7,7 +7,21 @@
 
 def samechars(s1, s2):
 	# Your code goes here
-	print(s1.split())
+	list1 = []
+	list2 = []
+	for i in s1:
+		if(i not in list1):
+			list1.append(i)
+	for j in s2:
+		if(j not in list2):
+			list2.append(j)
+
+	list1.sort()
+	list2.sort()
+	if(list1 == list2):
+		return True
+	else:
+		return False
 
 
-print(samechars("aassssdd", "ajdshd"))
+
