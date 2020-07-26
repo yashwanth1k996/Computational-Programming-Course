@@ -22,11 +22,12 @@ def longestcommonsubstring(s1, s2):
     while(box < len(small)):
         for i in range(0, len(small) - box):
             if(small[i:i+box] in big):
-                common.append(small[i:i+box])
+                print(small[i:i+box])
+                common = small[i:i+box]
         box += 1
     return common
 
 
-print(longestcommonsubstring("abcdef", "abqrcdest"))
+print(longestcommonsubstring("abcABC", "zzabZZAB"))
 
 
