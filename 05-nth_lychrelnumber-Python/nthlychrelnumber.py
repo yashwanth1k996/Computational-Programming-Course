@@ -39,5 +39,5 @@ def nthlychrelnumbers(n):
 		val += 1
 
 
-print(islychrel(196))
+print(nthlychrelnumbers(1))
 
