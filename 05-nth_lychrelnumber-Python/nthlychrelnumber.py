@@ -19,7 +19,8 @@ def reverse(x):
 	return val
 
 def islychrel(x):
-	for i in range(0, 20):
+	val = int(str(x)[:2])
+	for i in range(0, val):
 		x = x + reverse(x)
 		print(x)
 		if(ispalindrome(x)):
@@ -39,5 +40,5 @@ def nthlychrelnumbers(n):
 		val += 1
 
 
-print(nthlychrelnumbers(44))
+print(nthlychrelnumbers(15))
 
