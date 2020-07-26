@@ -4,7 +4,35 @@
 # 196-algorithm, after the most famous number associated with the process.
 # The first few Lychrel numbers are 196, 295, 394, 493, 592, 689, 691, 788, 790, 879, 887….
 
+def ispalindrome(x):
+	val = str(x)
+	if(val[-1:] == str(x)):
+		return True
+	else:
+		return False
+
+def reverse(x):
+	val = 0
+	while(x > 0):
+		val = (val*10) + (x%10)
+		x = x//10
+	return val
+
+def islychrel(x):
+	for i in range(0, 10):
+		x = x + reverse(x)
+		if(ispalindrome(x)):
+			return True
+	return False		
+		
 
 def nthlychrelnumbers(n):
 	# your code goes here
-	pass
+	count = -1
+	val = 1
+	while(count < n):
+		if(islychrel(val)):
+			count += 1
+			if(count == n):
+				return val
+		val += 1
