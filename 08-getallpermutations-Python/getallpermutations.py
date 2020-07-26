@@ -12,15 +12,16 @@ def permute(a, l, r, result):
 			a[l], a[i] = a[i], a[l]
 			permute(a, l+1, r, result)
 			a[l], a[i] = a[i], a[l]
-		# result.sort()
+		result.sort()
 		return result
 
 def getallpermutations(x):
 	# Your code goes here
-	n = len(x)
-	a = list(x)
-	result = []
-	return permute(a, 0, n-1, result)
+	# n = len(x)
+	# a = list(x)
+	# result = []
+	# return permute(a, 0, n-1, result)
+	return permutations(x)
 
 
 
