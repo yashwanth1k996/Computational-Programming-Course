@@ -19,7 +19,8 @@ def reverse(x):
 	return val
 
 def islychrel(x):
-	val = int(str(x)[:])
+	val = str(x)
+	val = int(val[:len(val) - 1])
 	for i in range(0, val):
 		x = x + reverse(x)
 		print(x)
