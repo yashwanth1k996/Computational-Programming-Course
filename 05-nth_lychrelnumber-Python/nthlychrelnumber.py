@@ -19,7 +19,7 @@ def reverse(x):
 	return val
 
 def islychrel(x):
-	for i in range(0, 10):
+	for i in range(0, 19):
 		x = x + reverse(x)
 		print(x)
 		if(ispalindrome(x)):
