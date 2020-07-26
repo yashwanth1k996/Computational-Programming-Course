@@ -26,4 +26,4 @@ def getallpermutations(x):
 
 
 print(getallpermutations("abc"))
-print(permutations("abc"))
+print(list(permutations("abc")))
