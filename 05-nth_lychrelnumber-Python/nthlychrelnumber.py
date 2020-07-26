@@ -39,7 +39,5 @@ def nthlychrelnumbers(n):
 			if(count == n):
 				return val
 		val += 1
-
-
 # print(nthlychrelnumbers(20))
 
