@@ -23,7 +23,6 @@ def islychrel(x):
 	val = int(val[:len(val) - 1])
 	for i in range(0, val):
 		x = x + reverse(x)
-		print(x)
 		if(ispalindrome(x)):
 			return False
 	return True		
