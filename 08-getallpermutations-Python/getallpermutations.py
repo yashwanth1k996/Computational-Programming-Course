@@ -5,7 +5,6 @@
 def permute(a, l, r, res):
 	if(l == r):
 		res.append(a)
-		return res
 	else:
 		for i in range(0, r+1):
 			a[l], a[i] = a[i], a[l]
@@ -23,4 +22,4 @@ def getallpermutations(x):
 
 
 
-permute(['a', 'b', 'c'], 0, 2, [])
+print(permute(['a', 'b', 'c'], 0, 2, []))
