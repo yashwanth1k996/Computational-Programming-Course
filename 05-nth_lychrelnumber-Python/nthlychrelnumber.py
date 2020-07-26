@@ -28,7 +28,7 @@ def islychrel(x):
 
 def nthlychrelnumbers(n):
 	# your code goes here
-	count = -1
+	count = 0
 	val = 1
 	while(count < n):
 		if(islychrel(val)):
@@ -36,3 +36,5 @@ def nthlychrelnumbers(n):
 			if(count == n):
 				return val
 		val += 1
+
+
