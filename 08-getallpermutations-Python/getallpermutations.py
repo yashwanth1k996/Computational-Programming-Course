@@ -10,6 +10,7 @@ def permute(a, l, r):
 			a[l], a[i] = a[i], a[l]
 			permute(a, l+1, r)
 			a[l], a[i] = a[i], a[l]
+		return result
 
 def getallpermutations(x):
 	# Your code goes here
