@@ -5,12 +5,14 @@
 # case-sensitive, so "ABC" and "abc" do not contain the same characters. The function returns False if either 
 # parameter is not a string, but returns True if both strings are empty (why?).
 
-def samechars(s1, s2):
+def samechars(b):
 	# Your code goes here
 	list1 = []
 	list2 = []
+	s1 = b[0]
+	s2 = b[1]
 	if(type(s1) != str or type(s2) != str):
-		return ""
+		return False
 	if(s1 == s2):
 		return True
 	for i in s1:
@@ -26,6 +28,6 @@ def samechars(s1, s2):
 		return True
 	else:
 		return False
-print(samechars("abcabcabc", "cbad"))
+# print(samechars("abcabcabc", "cbad"))
 
 
