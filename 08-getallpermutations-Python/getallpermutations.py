@@ -3,7 +3,7 @@
 # your program should print all 6 permutations e.g. [('a', 'b', 'c'), ('a', 'c', 'b'), ('b', 'a', 'c'), ('b', 'c', 'a'), ('c', 'a', 'b'), ('c', 'b', 'a')]
 def permute(a, l, r, result):
 	if(l == r):
-		result.append("".join(a))
+		result.append(tuple(a))
 	else:
 		for i in range(l, r+1):
 			a[l], a[i] = a[i], a[l]
